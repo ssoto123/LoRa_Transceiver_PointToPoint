@@ -49,7 +49,7 @@ A diferencia de un `Serial.print` simple, en este código construimos un paquete
      |         |         |__ Contador para detectar paquetes perdidos
      |         |__ ¿Quién envía? (Ej. 0xC1)
      |__ ¿Para quién es? (Ej. 0xD3)
-
+```
 ## ⚙️ Configuración para la Práctica
 
 *Para probar la comunicación entre dos estudiantes (Equipo A y Equipo B), se deben configurar las direcciones en el código antes de subirlo:
@@ -65,3 +65,28 @@ byte dir_destino = 0xD3;
 byte dir_local   = 0xD3; 
 byte dir_destino = 0xC1;
 ```
+## 🔌 Conexiones (Pinout)
+
+La tarjeta **Heltec V2** tiene los pines LoRa y OLED pre-conectados internamente.
+
+* **LED Integrado:** GPIO 25
+* **OLED SDA:** GPIO 4
+* **OLED SCL:** GPIO 15
+* **OLED RST:** GPIO 16
+* **Sensor DHT (Si se usa):** GPIO 13 (Recomendado)
+
+## 🚀 Integración con Sensores (Reto)
+
+El código base incluye una simulación de sensor (`sensorEstado = "ON/OFF"`). Para el reto de clase, los estudiantes deben:
+
+1. Integrar la librería `DHT.h`.
+2. Leer temperatura y humedad.
+3. Serializar los datos en un String (Ej: `"T:24.0|H:60"`).
+4. Reemplazar la función `sensor_revisa()` con lecturas reales.
+
+## 👤 Autor y Créditos
+
+**MGTI. Saúl Isaí Soto Ortiz** 
+Asignatura: Sistemas de Sensores, Internet de las Cosas y Tec. Inalámbricas
+
+> *Este material es para fines educativos. El código utiliza la banda de 915MHz (Región 2 ITU). Asegúrese de cumplir con las regulaciones locales de radiofrecuencia.*
