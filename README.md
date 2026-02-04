@@ -49,3 +49,20 @@ A diferencia de un `Serial.print` simple, en este código construimos un paquete
      |         |         |__ Contador para detectar paquetes perdidos
      |         |__ ¿Quién envía? (Ej. 0xC1)
      |__ ¿Para quién es? (Ej. 0xD3)
+
+## ⚙️ Configuración para la Práctica
+
+Para probar la comunicación entre dos estudiantes (Equipo A y Equipo B), se deben configurar las direcciones en el código antes de subirlo:
+
+**Estudiante A (Nodo 1):**
+
+```cpp
+byte dir_local   = 0xC1; 
+byte dir_destino = 0xD3;
+```
+
+**Estudiante B (Nodo 2):**
+```cpp
+byte dir_local   = 0xD3; 
+byte dir_destino = 0xC1;
+```
