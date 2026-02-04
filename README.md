@@ -52,7 +52,7 @@ A diferencia de un `Serial.print` simple, en este código construimos un paquete
 
 ## ⚙️ Configuración para la Práctica
 
-Para probar la comunicación entre dos estudiantes (Equipo A y Equipo B), se deben configurar las direcciones en el código antes de subirlo:
+*Para probar la comunicación entre dos estudiantes (Equipo A y Equipo B), se deben configurar las direcciones en el código antes de subirlo:
 
 **Estudiante A (Nodo 1):**
 
@@ -60,7 +60,6 @@ Para probar la comunicación entre dos estudiantes (Equipo A y Equipo B), se deb
 byte dir_local   = 0xC1; 
 byte dir_destino = 0xD3;
 ```
-
 **Estudiante B (Nodo 2):**
 ```cpp
 byte dir_local   = 0xD3; 
